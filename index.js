@@ -1,2 +1,4 @@
+//Include packages for the applications
+const fs = require("fs");
 const inquirer = require("inquirer");
-clear
+const {Circle, Square, Triangle} = require("./lib/shapes");
