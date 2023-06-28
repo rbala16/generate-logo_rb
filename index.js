@@ -78,7 +78,7 @@ if (answers.text.length > 0 && answers.text.length < 4) {
   user_text = answers.text;
 } else {
   // 0 or 4+ chars, invalid entry
-  console.log("Invalid user text field detected! Please enter 1-3 Characters, no more and no less");
+  console.log("Please enter 1-3 Characters!!");
       return;
 }
 console.log("User text: [" + user_text + "]");
@@ -86,10 +86,10 @@ console.log("User text: [" + user_text + "]");
 user_font_color = answers["text-color"];
 console.log("User font color: [" + user_font_color + "]");
 //user shape color
-user_shape_color = answers.shape;
+user_shape_color = answers["shape-color"];
 console.log("User shape color: [" + user_shape_color + "]");
 //user shape type
-user_shape_type = answers["pixel-image"];
+user_shape_type = answers.shape;
 console.log("User entered shape = [" + user_shape_type + "]");
 
 //user shape
