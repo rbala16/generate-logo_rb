@@ -61,7 +61,7 @@ The following image shows a mock-up of the generated SVG given the following inp
 ![Image showing a green circle with white text that reads "SVG.".](./images/logo.png)
 
 * A walkthrough video demonstrating the functionality of the application.
-![alt demo](./examples/logo.gif.gif)
+![alt demo](./examples/logo.gif)
 <br>
 
 The full movie file showing functionality of the application can be found here : https://drive.google.com/file/d/1oeLgSmnspT2CmFGc2yxT0Du2zw09t2WV/view
@@ -86,8 +86,10 @@ Rajni bala : (https://github.com/rbala16)
 https://drive.google.com/file/d/1oeLgSmnspT2CmFGc2yxT0Du2zw09t2WV/view
 
 
-* At least one sample SVG file generated using your application.<br>
+One sample SVG file generated using your application.<br>
 https://github.com/rbala16/generate-logo_rb/blob/main/logo.svg
+<br>
+You can find more samples under example order.
 
 * The URL of the GitHub repository, with a unique name and a README describing the project.<br>
 https://github.com/rbala16/generate-logo_rb
