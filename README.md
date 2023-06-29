@@ -86,7 +86,7 @@ Rajni bala : (https://github.com/rbala16)
 https://drive.google.com/file/d/1oeLgSmnspT2CmFGc2yxT0Du2zw09t2WV/view
 
 
-One sample SVG file generated using your application.<br>
+* One sample SVG file generated using your application.<br>
 https://github.com/rbala16/generate-logo_rb/blob/main/logo.svg
 <br>
 You can find more samples under example order.
