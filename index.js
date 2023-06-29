@@ -3,7 +3,7 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const {Circle, Square, Triangle} = require("./lib/shapes");
 
-
+//SVg class constructor generated
 class Svg{
   constructor(){
       this.textElement = ''
@@ -58,15 +58,15 @@ const questions = [
 //  Create a function to data svg file
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) =>{
-  err ? console.log(err) : console.log('Successfully created logo.svg')
+  err ? console.log(err) : console.log('Generated logo.svg!!')
 ;
 })
 }
 
 async function init() {
-  console.log("Starting init");
-var svgString = "";
-var svg_file = "logo.svg";
+  console.log("Answer few questions to Create logo");
+var svg_input = "";
+var svg_logo = "logo.svg";
 
   // Prompt the user for answers
   const answers = await inquirer.prompt(questions);
@@ -83,46 +83,46 @@ if (answers.text.length > 0 && answers.text.length < 4) {
 }
 console.log("User text: [" + user_text + "]");
 //user font color
-user_font_color = answers["text-color"];
-console.log("User font color: [" + user_font_color + "]");
+font_color = answers["text-color"];
+console.log("User font color: [" + font_color + "]");
 //user shape color
-user_shape_color = answers["shape-color"];
-console.log("User shape color: [" + user_shape_color + "]");
+shape_color = answers["shape-color"];
+console.log("User shape color: [" + shape_color + "]");
 //user shape type
-user_shape_type = answers.shape;
-console.log("User entered shape = [" + user_shape_type + "]");
+shape_type = answers.shape;
+console.log("User entered shape = [" + shape_type + "]");
 
-//user shape
+//user shape conditional statements 
 let user_shape;
-if (user_shape_type === "Square" || user_shape_type === "square") {
+if (shape_type === "Square" || shape_type === "square") {
   user_shape = new Square();
   console.log("User selected Square shape");
 }
-else if (user_shape_type === "Circle" || user_shape_type === "circle") {
+else if (shape_type === "Circle" || shape_type === "circle") {
   user_shape = new Circle();
   console.log("User selected Circle shape");
 }
-else if (user_shape_type === "Triangle" || user_shape_type === "triangle") {
+else if (shape_type === "Triangle" || shape_type === "triangle") {
   user_shape = new Triangle();
   console.log("User selected Triangle shape");
 }
 else {
   console.log("Invalid shape!");
 }
-user_shape.setColor(user_shape_color);
+user_shape.setColor(shape_color);
 
 // Create a new Svg instance and add the shape and text elements to it
 var svg = new Svg();
-svg.setTextElement(user_text, user_font_color);
+svg.setTextElement(user_text, font_color);
 svg.setShapeElement(user_shape);
-svgString = svg.render();
+svg_input = svg.render();
 
 //Print shape to log
-console.log("Displaying shape:\n\n" + svgString);
-//document.getElementById("svg_image").innerHTML = svgString;
+console.log("Priniting shape:\n\n" + svg_input);
+
 
 console.log("Shape generation complete!");
 console.log("Writing shape to file...");
-writeToFile(svg_file, svgString); 
+writeToFile(svg_logo, svg_input); 
 }
 init()
